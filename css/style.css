@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-color:#344767;    
+    --primary-rgb-color:rgb(52, 71, 103);    
+    --secondary-color:#7b809a;    
+    --secondary-rgb-color:rgb(123, 128, 154);   
+    --black-color:#000000;
+    --black-rgb-color:rgb(0, 0, 0);
+    --white-color:#ffffff;
+    --white-rgb-color:rgb(255, 255, 255);
+    --font-size:14px;
+    --line-height:1.5;
+    --font-weight:400;
+    --gutter-width:16px;
+    --slidebar-width:250px; 
+    --slidebar-margin:16px 0 16px 16px;
+    --border-radius: 12px;
+    --box-border-radius:6px;
+}
+body{
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    line-height: var(--line-height);
+    color: var(--primary-color);
+    background-color: #f0f2f5;
+    font-family: "Roboto Flex", sans-serif;
+}
+.container{
+    width: 100%;
+    padding-left: var(--gutter-width);
+    padding-right: var(--gutter-width);
+}
+ul,ol {
+    padding: 0;
+    list-style: none;
+}
+a {
+  color: var(--white-color);
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+.row-gap{
+  row-gap: 20px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: calc(-1 * var(--guuter-width));
+  padding-right: calc(-1 * var(--guuter-width));
+}
+.py{
+  padding-top: 90px;
+  padding-bottom:90px;
+}
+.pt{
+  padding-top: 90px;
+}
+.pb{
+  padding-bottom: 30px;
+}
+.d-f{
+  display: flex;
+  flex-wrap: wrap;
+}
+.w-1 {
+  width: 8.3333%;
+}
+.w-2 {
+  width: 16.6666%;
+}
+.w-3 {
+  width: 25%;
+ }
+.w-4 {
+  width: 33.3333%;
+}
+.w-5 {
+  width: 41.6666%;
+}
+.w-6 {
+  width: 50%;
+}
+.w-7 {
+  width: 58.3333%;
+}
+.w-8 {
+  width: 66.6666%;
+}
+.w-9 {
+  width: 75%;
+}
+.w-10 {
+  width: 83.33333%;
+}
+.w-11 {
+  width: 91.6666%;
+}
+.w-12 {
+  width: 100%;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-end {
+  justify-content: end;
+}
+.space-between {
+  justify-content: space-between;
+}
+.space-around {
+  justify-content: space-around;
+}
+.space-evenly {
+  justify-content: space-evenly;
+}
+.align-center {
+  align-items: center;
+}
+.w-1,.w-2,.w-3,.w-4,.w-5,.w-6,.w-7,.w-8,.w-9,.w-10,.w-11,.w-12 {
+  padding-left: var(--gutter-width);
+  padding-right: var(--gutter-width);
+  border: 1px solid #000;
+}
+
+/* slidebar */
+.slidebar{
+  width: var(--slidebar-width);
+  height: 100vh;
+  border: 1px solid black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: var(--slidebar-margin);
+  border-radius: var(--border-radius);
+  background-image: linear-gradient(195deg,#42424a,#191919);
+  overflow: scroll;
+}
+.slidebar-logo{
+  padding: 24px 20px;
+}
+.slidebar-logo a img{
+  max-height: 32px;
+}
+.slidebar-logo a span{
+  color: var(--white-color);
+  margin-left: 4px;
+  /* font-weight: 600; */
+}
+hr{
+  margin: 16px 0;
+  border: 0;
+  opacity: .25;
+  height: 1px;
+}
+.line{
+  background-image: linear-gradient(90deg,hsla(0,0%,100%,0),#fff,hsla(0,0%,100%,0));
+}
+.sidenav ul li{
+  margin-bottom: 8px;
+}
+.sidenav ul li a{
+  margin: 2.75px 16px 2.75px 16px;
+  padding: 12px 16px;
+  display: flex;
+  transition: all 0.3s;
+}
+.sidenav ul li a:hover{
+  background-color: #c7c7c733;
+  border-radius: var(--box-border-radius);
+}
+.sidenav ul li img{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.slidebar-user a span{
+  font-weight: 100;
+
+}
+.sidenav ul li a span{
+  margin-left: 8px;
+  padding-left: 4px; 
+  font-weight: 300;
+}
+.dropdown{
+  position: relative;
+}
+.dropdown::after{
+  font-family: 'Font Awesome\ 5 Free';
+  position: absolute;
+  content: "\f107";
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  font-weight: 700;
+  color: #ced4dab3;
+}
+.dashboard{
+  background-color: #c7c7c733;
+  border-radius: var(--box-border-radius);
+}
+.dashboard.dashboard::after{
+  color: var(--white-color);
+}
+.sidenav nav ul h6{
+  font-size: 12px;
+  color: var(--white-color);
+  font-weight: 700;
+  margin: 16px  0 8px;
+  padding: 0 0 0 24px;
+}
+.dropdown-menu ul li a span{
+  font-weight: 100;
+}
+.my-profile{
+  background-color: #e91e63;
+  border-radius: var(--box-border-radius);
+}
+nav ul li .dropdown-menu .my-profile:hover{
+  background-color: #e91e63;
+}
+/* main-iteam */
+.main-iteam{
+  margin-left: calc(var(--slidebar-width) + 32px);
+  border: 1px solid black;
+}
